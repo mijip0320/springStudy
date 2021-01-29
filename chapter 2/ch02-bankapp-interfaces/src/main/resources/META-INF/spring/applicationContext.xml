@@ -8,6 +8,7 @@
 		<property name="fixedDepositService" ref="service" />
 	</bean>
 
+	<!--FixedDepositHibernateDao의 인스턴스(FixedDepositDao 인터페이스를 구현함)를 FixedDepositServiceImpl에 주입 -->
 	<bean id="service"
 		class="sample.spring.chapter02.bankapp.service.FixedDepositServiceImpl">
 		<property name="fixedDepositDao" ref="dao" />
