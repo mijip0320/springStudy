@@ -65,11 +65,13 @@ public class EventSenderFactoryBean implements FactoryBean<EventSender> {
 		return eventSender;
 	}
 
+	//FactoryBean 구현이 관리하는 객체의 타입을 반환. FactoryBean 구현은 EventSender 타입의 객체를 만들어서 반환
 	@Override
 	public Class<?> getObjectType() {
 		return EventSender.class;
 	}
 
+	//FactoryBean 구현이 싱글턴 스코프 객체를 만드는 팩토리라면 true를 반환
 	@Override
 	public boolean isSingleton() {
 		return true;
